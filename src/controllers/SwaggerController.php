@@ -1,6 +1,7 @@
 <?php
 namespace Latrell\Swagger;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Config;
