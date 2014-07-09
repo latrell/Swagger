@@ -1,6 +1,8 @@
 {
     "name": "latrell/swagger",
     "description": "Swagger for Laravel",
+    "keywords": ["L4", "Laravel 4", "Laravel", "Swagger", "Swagger-PHP", "Swagger-UI"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Latrell Chan",
