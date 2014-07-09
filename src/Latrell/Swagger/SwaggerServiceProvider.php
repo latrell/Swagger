@@ -40,6 +40,15 @@ class SwaggerServiceProvider extends ServiceProvider
             if ($return_var) {
                 throw new SwaggerException(join("\n", $output));
             }
+            $errors = [];
+            foreach ($output as $line) {
+                if (preg_match('/^\[\w+\]/', $line, $matchs)) {
+                    $errors[] = $line;
+                }
+            }
+            if ($errors) {
+                throw new SwaggerException(join("\n", $errors));
+            }
 
             require __DIR__ . '/../../routes.php';
         }
