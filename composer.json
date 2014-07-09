@@ -1,0 +1,24 @@
+{
+    "name": "latrell/swagger",
+    "description": "Swagger for Laravel",
+    "authors": [
+        {
+            "name": "Latrell Chan",
+            "email": "i@latrell.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "zircote/swagger-php": "*"
+    },
+    "autoload": {
+    	"classmap": [
+            "src/controllers"
+        ],
+        "psr-0": {
+            "Latrell\\Swagger\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
