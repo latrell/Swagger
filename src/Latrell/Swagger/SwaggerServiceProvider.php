@@ -34,7 +34,8 @@ class SwaggerServiceProvider extends ServiceProvider
         if (Config::get('app.debug')) {
             $appdir = app_path();
             $docdir = base_path(Config::get('swagger::docs-dir'));
-            $swagger = realpath(dirname(__DIR__) . '/../../') . '/vendor/zircote/swagger-php/swagger.phar';
+            // $swagger = realpath(dirname(__DIR__) . '/../../') . '/vendor/zircote/swagger-php/swagger.phar';
+            $swagger = base_path('vendor/zircote/swagger-php/swagger.phar');
             exec(sprintf('php "%s" "%s" -o "%s"', $swagger, $appdir, $docdir), $output, $return_var);
             if ($return_var) {
                 throw new SwaggerException(join("\n", $output));
