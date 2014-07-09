@@ -41,6 +41,8 @@ Then publish the public files with `php artisan asset:publish latrell/swagger` t
 Then publish the config file with `php artisan config:publish latrell/swagger`. This will add the file `app/config/packages/latrell/swagger/config.php`.
 This config file is the primary way you interact with Swagger.
 
-## Documentation
+## Example
 
-[http://zircote.com/swagger-php](http://zircote.com/swagger-php)
+* [Demo](http://petstore.swagger.wordnik.com)
+* [Documentation](http://zircote.com/swagger-php)
+
