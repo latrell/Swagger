@@ -15,7 +15,7 @@ class Swagger
     {
         $projectPaths = $this->realpaths($this->paths);
         $excludePaths = $this->realpaths($this->exclude);
-        $outputPath = head($this->realpaths(base_path($this->output)));
+        $outputPath = head($this->realpaths(base_path($this->output))) . DIRECTORY_SEPARATOR;
 
         $swagger = new \Swagger\Swagger($projectPaths, $excludePaths);
 
@@ -94,7 +94,6 @@ class Swagger
                     throw new SwaggerException("Path \"{$path}\" not found");
                 }
             }
-            $paths[$i] .= DIRECTORY_SEPARATOR;
         }
         return $paths;
     }
