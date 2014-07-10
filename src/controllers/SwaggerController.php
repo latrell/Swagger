@@ -15,20 +15,13 @@ class SwaggerController extends Controller
         return View::make('swagger::index');
     }
 
-    public function getDocs($page = 'index.php')
+    public function getDocs($page = 'api-docs.json')
     {
-        $path = base_path(Config::get('swagger::docs-dir') . '/' . $page);
+        $path = base_path(Config::get('swagger::output') . '/' . $page);
         if (! file_exists($path)) {
             App::abort(404);
         }
-        $content = '';
-        if (array_get(pathinfo($page), 'extension') === 'php') {
-            ob_start();
-            require $path;
-            $content = ob_get_clean();
-        } else {
-            $content = file_get_contents($path);
-        }
-        return Response::make($content);//->header('Content-Type', 'application/json');
+        $content = file_get_contents($path);
+        return Response::make($content)->header('Content-Type', 'application/json');
     }
 }
