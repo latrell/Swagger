@@ -12,6 +12,23 @@ class SwaggerController extends Controller
 
     public function getIndex()
     {
+        $swagger = new Swagger();
+
+        $swagger->paths = Config::get('swagger::paths');
+        $swagger->exclude = Config::get('swagger::exclude');
+        $swagger->output = Config::get('swagger::output');
+        $swagger->suffix = Config::get('swagger::suffix');
+        $swagger->default_api_version = Config::get('swagger::default-api-version');
+        $swagger->default_swagger_version = Config::get('swagger::default-swagger-version');
+        $swagger->api_doc_template = Config::get('swagger::api-doc-template');
+        $swagger->default_base_path = Config::get('swagger::default-base-path');
+
+        if (is_null($swagger->default_base_path)) {
+            $swagger->default_base_path = Config::get('app.url');
+        }
+
+        $swagger->fire();
+
         return View::make('swagger::index');
     }
 
