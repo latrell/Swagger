@@ -3,25 +3,25 @@
 <head>
   <title>{{ Config::get('swagger::title'); }}</title>
   <!-- <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/> -->
-  <link href="{{ asset('packages/Latrell/Swagger/css/fonts.css') }}" rel='stylesheet' type='text/css'/>
-  <link href="{{ asset('packages/Latrell/Swagger/css/reset.css') }}" media='screen' rel='stylesheet' type='text/css'/>
-  <link href="{{ asset('packages/Latrell/Swagger/css/screen.css') }}" media='screen' rel='stylesheet' type='text/css'/>
-  <link href="{{ asset('packages/Latrell/Swagger/css/reset.css') }}" media='print' rel='stylesheet' type='text/css'/>
-  <link href="{{ asset('packages/Latrell/Swagger/css/screen.css') }}" media='print' rel='stylesheet' type='text/css'/>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/shred.bundle.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/jquery-1.8.0.min.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/jquery.slideto.min.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/jquery.wiggle.min.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/jquery.ba-bbq.min.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/handlebars-1.0.0.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/underscore-min.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/backbone-min.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/swagger.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/swagger-ui.js') }}" type='text/javascript'></script>
-  <script src="{{ asset('packages/Latrell/Swagger/lib/highlight.7.3.pack.js') }}" type='text/javascript'></script>
+  <link href="{{ asset('packages/latrell/swagger/css/fonts.css') }}" rel='stylesheet' type='text/css'/>
+  <link href="{{ asset('packages/latrell/swagger/css/reset.css') }}" media='screen' rel='stylesheet' type='text/css'/>
+  <link href="{{ asset('packages/latrell/swagger/css/screen.css') }}" media='screen' rel='stylesheet' type='text/css'/>
+  <link href="{{ asset('packages/latrell/swagger/css/reset.css') }}" media='print' rel='stylesheet' type='text/css'/>
+  <link href="{{ asset('packages/latrell/swagger/css/screen.css') }}" media='print' rel='stylesheet' type='text/css'/>
+  <script src="{{ asset('packages/latrell/swagger/lib/shred.bundle.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/jquery-1.8.0.min.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/jquery.slideto.min.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/jquery.wiggle.min.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/jquery.ba-bbq.min.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/handlebars-1.0.0.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/underscore-min.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/backbone-min.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/swagger.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/swagger-ui.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/highlight.7.3.pack.js') }}" type='text/javascript'></script>
 
   <!-- enabling this will enable oauth2 implicit scope support -->
-  <script src="{{ asset('packages/Latrell/Swagger/lib/swagger-oauth.js') }}" type='text/javascript'></script>
+  <script src="{{ asset('packages/latrell/swagger/lib/swagger-oauth.js') }}" type='text/javascript'></script>
 
   <script type="text/javascript">
     $(function () {
@@ -68,10 +68,10 @@
     <a id="logo" href="http://swagger.wordnik.com">swagger</a>
     <form id='api_selector'>
       <div class='input icon-btn'>
-        <img id="show-pet-store-icon" src="{{ asset('packages/Latrell/Swagger/images/pet_store_api.png') }}" title="Show Swagger Petstore Example Apis">
+        <img id="show-pet-store-icon" src="{{ asset('packages/latrell/swagger/images/pet_store_api.png') }}" title="Show Swagger Petstore Example Apis">
       </div>
       <div class='input icon-btn'>
-        <img id="show-wordnik-dev-icon" src="{{ asset('packages/Latrell/Swagger/images/wordnik_api.png') }}" title="Show Wordnik Developer Apis">
+        <img id="show-wordnik-dev-icon" src="{{ asset('packages/latrell/swagger/images/wordnik_api.png') }}" title="Show Wordnik Developer Apis">
       </div>
       <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text"/></div>
       <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
