@@ -1,5 +1,7 @@
 <?php
 return array(
+    'enable' => Config::get('app.debug'),
+
     'prefix' => 'api-docs',
 
     'paths' => 'app',

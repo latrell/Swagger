@@ -33,11 +33,13 @@
         log("Loaded SwaggerUI");
 
         if(typeof initOAuth == "function") {
-          initOAuth({
-            clientId: "your-client-id",
-            realm: "your-realms",
-            appName: "your-app-name"
-          });
+        	/*
+            initOAuth({
+              clientId: "your-client-id",
+              realm: "your-realms",
+              appName: "your-app-name"
+            });
+            */
         }
         $('pre code').each(function(i, e) {
           hljs.highlightBlock(e)

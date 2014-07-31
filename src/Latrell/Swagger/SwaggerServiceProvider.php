@@ -31,7 +31,7 @@ class SwaggerServiceProvider extends ServiceProvider
             'swagger::install'
         ));
 
-        if (Config::get('app.debug')) {
+        if (Config::get('swagger::enable')) {
             require __DIR__ . '/../../routes.php';
         }
     }
