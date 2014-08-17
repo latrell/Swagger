@@ -84,7 +84,7 @@ var Docs = {
 
 	shebang: function() {
 
-		// If shebang has an operation nickname in it..
+		// If shebang has an operation nicklatrell/swaggername in it..
 		// e.g. /docs/#!/words/get_search
 		var fragments = $.param.fragment().split('/');
 		fragments.shift(); // get rid of the bang
@@ -395,7 +395,7 @@ function program18(depth0,data) {
 function program20(depth0,data) {
   
   
-  return "\n          <div class='sandbox_header'>\n            <input class='submit' name='commit' type='button' value='Try it out!' />\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\n            <img alt='Throbber' class='response_throbber' src='/packages/Latrell/Swagger/images/throbber.gif' style='display:none' />\n          </div>\n          ";
+  return "\n          <div class='sandbox_header'>\n            <input class='submit' name='commit' type='button' value='Try it out!' />\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\n            <img alt='Throbber' class='response_throbber' src='/packages/latrell/swagger/images/throbber.gif' style='display:none' />\n          </div>\n          ";
   }
 
   buffer += "\n  <ul class='operations' >\n    <li class='";
