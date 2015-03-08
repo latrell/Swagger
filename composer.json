@@ -1,7 +1,7 @@
 {
     "name": "latrell/swagger",
-    "description": "Swagger for Laravel",
-    "keywords": ["L4", "Laravel 4", "Laravel", "Swagger", "Swagger-PHP", "Swagger-UI"],
+    "description": "Swagger for Laravel5",
+    "keywords": ["L5", "Laravel 5", "Laravel", "Swagger", "Swagger-PHP", "Swagger-UI"],
     "license": "MIT",
     "authors": [
         {
@@ -11,16 +11,28 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
+        "illuminate/support": "5.*",
+        "illuminate/view": "5.*",
+        "illuminate/config": "5.*",
+        "illuminate/console": "5.*",
         "zircote/swagger-php": "*"
     },
+    "require-dev": {
+		"phpunit/phpunit": "4.*",
+		"mockery/mockery": "*"
+	},
     "autoload": {
-    	"classmap": [
+    		"classmap": [
             "src/controllers"
         ],
         "psr-0": {
             "Latrell\\Swagger\\": "src/"
         }
     },
+    "autoload-dev": {
+		"files": [
+			"tests/TestCase.php"
+		]
+	},
     "minimum-stability": "stable"
 }
