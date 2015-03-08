@@ -11,7 +11,17 @@ class SwaggerServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		if (config('latrell/swagger/config.enable')) {
+		$this->publishes([
+			__DIR__ . '/../../config/config.php' => config_path('latrell-swagger.php')
+		]);
+
+		$this->loadViewsFrom(__DIR__ . '/../../views', 'latrell/swagger');
+
+		$this->publishes([
+			__DIR__ . '/../../../public' => public_path('vendor/latrell/swagger')
+		], 'public');
+
+		if (config('latrell-swagger.enable')) {
 			require __DIR__ . '/../../routes.php';
 		}
 	}
@@ -23,10 +33,6 @@ class SwaggerServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$configPath = __DIR__ . '/../../config/config.php';
-		$this->mergeConfigFrom($configPath, 'latrell/swagger/config');
-		$this->publishes([
-			$configPath => config_path('latrell/swagger/config.php')
-		]);
+		$this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'latrell-swagger');
 	}
 }

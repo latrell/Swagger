@@ -14,14 +14,14 @@ class SwaggerController extends Controller
     {
         $swagger = new Swagger();
 
-        $swagger->paths = Config::get('swagger::paths');
-        $swagger->exclude = Config::get('swagger::exclude');
-        $swagger->output = Config::get('swagger::output');
-        $swagger->suffix = Config::get('swagger::suffix');
-        $swagger->default_api_version = Config::get('swagger::default-api-version');
-        $swagger->default_swagger_version = Config::get('swagger::default-swagger-version');
-        $swagger->api_doc_template = Config::get('swagger::api-doc-template');
-        $swagger->default_base_path = Config::get('swagger::default-base-path');
+        $swagger->paths = config('latrell-swagger.paths');
+        $swagger->exclude = config('latrell-swagger.exclude');
+        $swagger->output = config('latrell-swagger.output');
+        $swagger->suffix = config('latrell-swagger.suffix');
+        $swagger->default_api_version = config('latrell-swagger.default-api-version');
+        $swagger->default_swagger_version = config('latrell-swagger.default-swagger-version');
+        $swagger->api_doc_template = config('latrell-swagger.api-doc-template');
+        $swagger->default_base_path = config('latrell-swagger.default-base-path');
 
         if (is_null($swagger->default_base_path)) {
             $swagger->default_base_path = Config::get('app.url');
@@ -29,12 +29,12 @@ class SwaggerController extends Controller
 
         $swagger->fire();
 
-        return View::make('swagger::index');
+        return view('latrell/swagger::index');
     }
 
     public function getDocs($page = 'api-docs.json')
     {
-        $path = base_path(Config::get('swagger::output') . '/' . $page);
+        $path = base_path(config('latrell-swagger.output') . '/' . $page);
         if (! file_exists($path)) {
             App::abort(404);
         }

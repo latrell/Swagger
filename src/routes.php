@@ -1,16 +1,16 @@
 <?php
-Route::group(array(
-    'prefix' => Config::get('swagger::prefix')
-), function ()
+Route::group([
+	'prefix' => config('latrell-swagger.prefix')
+], function ()
 {
 
-    Route::get('/', array(
-        'as' => 'swagger_index',
-        'uses' => 'Latrell\Swagger\SwaggerController@getIndex'
-    ));
+	Route::get('/', [
+		'as' => 'swagger_index',
+		'uses' => 'Latrell\Swagger\SwaggerController@getIndex'
+	]);
 
-    Route::get('docs/{page?}', array(
-        'as' => 'swagger_docs',
-        'uses' => 'Latrell\Swagger\SwaggerController@getDocs'
-    ));
+	Route::get('docs/{page?}', [
+		'as' => 'swagger_docs',
+		'uses' => 'Latrell\Swagger\SwaggerController@getDocs'
+	]);
 });

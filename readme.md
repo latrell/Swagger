@@ -1,7 +1,7 @@
 Swagger
 ======
 
-Swagger for Laravel
+Swagger for Laravel5
 
 This package combines [swagger-php](https://github.com/zircote/swagger-php) and [swagger-ui](https://github.com/wordnik/swagger-ui) into one Laravel-friendly package.
 
@@ -23,23 +23,18 @@ Update your packages with ```composer update``` or install with ```composer inst
 To use the Swagger Service Provider, you must register the provider when bootstrapping your Laravel application.
 There are essentially two ways to do this.
 
-Find the `providers` key in `app/config/app.php` and register the Smarty Service Provider.
+Find the `providers` key in `config/app.php` and register the Swagger Service Provider.
 
 ```php
-    'providers' => array(
+    'providers' => [
         // ...
         'Latrell\Swagger\SwaggerServiceProvider',
-    )
+    ]
 ```
 
-Run php artisan `swagger:install` to push swagger-ui to your public folder and publish the config file.
+Run `php artisan vendor:publish` to push swagger-ui to your public folder and publish the config file.
 
-OR
-
-Then publish the public files with `php artisan asset:publish latrell/swagger` to push swagger-ui to your public folder.
-
-Then publish the config file with `php artisan config:publish latrell/swagger`. This will add the file `app/config/packages/latrell/swagger/config.php`.
-This config file is the primary way you interact with Swagger.
+Config file `config/latrell-swagger.php` is the primary way you interact with Swagger.
 
 ## Example
 
