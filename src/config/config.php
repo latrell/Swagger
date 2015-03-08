@@ -1,6 +1,6 @@
 <?php
 return array(
-    'enable' => Config::get('app.debug'),
+    'enable' => config('app.debug'),
 
     'prefix' => 'api-docs',
 
