@@ -18,6 +18,10 @@ class SwaggerServiceProvider extends ServiceProvider
 		$this->loadViewsFrom(__DIR__ . '/../../views', 'latrell/swagger');
 
 		$this->publishes([
+			__DIR__ . '/../../views' => base_path('resources/views/vendor/latrell/swagger')
+		], 'views');
+
+		$this->publishes([
 			__DIR__ . '/../../../public' => public_path('vendor/latrell/swagger')
 		], 'public');
 
