@@ -15,7 +15,7 @@ class Swagger
 	{
 		$projectPaths = $this->realpaths($this->paths);
 		$excludePaths = $this->realpaths($this->exclude);
-		$outputPath = head($this->realpaths(base_path($this->output))) . DIRECTORY_SEPARATOR;
+		$outputPath = head((array) $this->output) . DIRECTORY_SEPARATOR;
 
 		$swagger = new \Swagger\Swagger($projectPaths, $excludePaths);
 
@@ -49,6 +49,9 @@ class Swagger
 			throw new SwaggerException(sprintf('[%s] is not a directory', $outputPath));
 		} elseif (! file_exists($outputPath) && ! mkdir($outputPath, 0755, true)) {
 			throw new SwaggerException(sprintf('[%s] is not writeable', $outputPath));
+		}
+		if (! file_exists($outputPath . '/.gitignore')) {
+			file_put_contents($outputPath . '/.gitignore', "*\n!.gitignore");
 		}
 
 		$filename = $outputPath . 'api-docs.json';

@@ -1,17 +1,17 @@
 <?php
 return array(
-    'enable' => config('app.debug'),
+	'enable' => config('app.debug'),
 
-    'prefix' => 'api-docs',
+	'prefix' => 'api-docs',
 
-    'paths' => 'app',
-    'output' => 'docs',
-    'exclude' => null,
-    'default-base-path' => null,
-    'default-api-version' => null,
-    'default-swagger-version' => null,
-    'api-doc-template' => null,
-    'suffix' => '.{format}',
+	'paths' => base_path('app'),
+	'output' => storage_path('swagger/docs'),
+	'exclude' => null,
+	'default-base-path' => null,
+	'default-api-version' => null,
+	'default-swagger-version' => null,
+	'api-doc-template' => null,
+	'suffix' => '.{format}',
 
-    'title' => 'Swagger UI'
+	'title' => 'Swagger UI'
 );

@@ -1,7 +1,9 @@
 Swagger
 ======
 
-Swagger for Laravel5
+For Laravel 4, please use the [0.3 branch](https://github.com/Latrell/Swagger/releases/tag/0.3)!
+
+Swagger for Laravel 5
 
 This package combines [swagger-php](https://github.com/zircote/swagger-php) and [swagger-ui](https://github.com/wordnik/swagger-ui) into one Laravel-friendly package.
 
