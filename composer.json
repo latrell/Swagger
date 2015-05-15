@@ -1,6 +1,6 @@
 {
     "name": "latrell/swagger",
-    "description": "Swagger for Laravel5",
+    "description": "Swagger for Laravel 5",
     "keywords": ["L5", "Laravel 5", "Laravel", "Swagger", "Swagger-PHP", "Swagger-UI"],
     "license": "MIT",
     "authors": [
