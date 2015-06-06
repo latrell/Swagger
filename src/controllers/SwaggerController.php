@@ -17,7 +17,7 @@ class SwaggerController extends Controller
         $swagger->paths = config('latrell-swagger.paths');
         $swagger->exclude = config('latrell-swagger.exclude');
         $swagger->output = config('latrell-swagger.output');
-        $swagger->suffix = config('latrell-swagger.suffix');
+        $swagger->suffix = "";
         $swagger->default_api_version = config('latrell-swagger.default-api-version');
         $swagger->default_swagger_version = config('latrell-swagger.default-swagger-version');
         $swagger->api_doc_template = config('latrell-swagger.api-doc-template');

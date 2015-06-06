@@ -11,7 +11,7 @@ return array(
 	'default-api-version' => null,
 	'default-swagger-version' => null,
 	'api-doc-template' => null,
-	'suffix' => '.{format}',
+//	'suffix' => '.{format}',
 
 	'title' => 'Swagger UI'
 );
