@@ -32,8 +32,9 @@ class SwaggerController extends Controller
         return view('latrell/swagger::index');
     }
 
-    public function getDocs($page = 'api-docs.json')
+    public function getDocs($page = 'api-docs')
     {
+        $page = $page . '.json';
         $path = head((array) config('latrell-swagger.output')) . DIRECTORY_SEPARATOR . $page;
         if (! file_exists($path)) {
             App::abort(404);
