@@ -15,7 +15,7 @@
         "illuminate/view": "5.*",
         "illuminate/config": "5.*",
         "illuminate/console": "5.*",
-        "zircote/swagger-php": "*"
+        "zircote/swagger-php": "1.*"
     },
     "require-dev": {
 		"phpunit/phpunit": "4.*",
