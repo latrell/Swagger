@@ -4,7 +4,10 @@ return array(
 
 	'prefix' => 'api-docs',
 
-	'paths' => base_path('app'),
+	'paths' => [
+		app_path(),
+		base_path('routes')
+	],
 	'output' => storage_path('swagger/docs'),
 	'exclude' => null,
 	'default-base-path' => null,
