@@ -17,7 +17,9 @@ class Swagger
 		$excludePaths = $this->realpaths($this->exclude);
 		$outputPath = head((array) $this->output) . DIRECTORY_SEPARATOR;
 
-		$swagger = new \Swagger\Swagger($projectPaths, $excludePaths);
+		$swagger = \Swagger\scan($projectPaths, [
+			'exclude' => $excludePaths
+		]);
 
 		$resourceList = $swagger->getResourceList([
 			'output' => 'array',
