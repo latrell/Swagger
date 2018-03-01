@@ -25,7 +25,11 @@ class SwaggerServiceProvider extends ServiceProvider
 			__DIR__ . '/../../../public' => public_path('vendor/latrell/swagger')
 		], 'public');
 
-		if (config('latrell-swagger.enable')) {
+		$enable = config('latrell-swagger.enable');
+		if ($enable === null) {
+			$enable = config('app.debug') && ! app()->runningInConsole() && ! app()->environment('testing');
+		}
+		if ($enable) {
 			require __DIR__ . '/../../routes.php';
 		}
 	}

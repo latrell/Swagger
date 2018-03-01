@@ -1,6 +1,6 @@
 <?php
 return array(
-	'enable' => config('app.debug'),
+	'enable' => env('SWAGGER_ENABLE', null),
 
 	'prefix' => 'api-docs',
 
