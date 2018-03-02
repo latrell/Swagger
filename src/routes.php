@@ -1,5 +1,6 @@
 <?php
 Route::group([
+	'middleware' => config('latrell-swagger.middleware'),
 	'prefix' => config('latrell-swagger.prefix')
 ], function ()
 {
