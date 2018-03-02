@@ -83,7 +83,11 @@ window.onload = function() {
     plugins: [
       SwaggerUIBundle.plugins.DownloadUrl
     ],
-    layout: "StandaloneLayout"
+    layout: "StandaloneLayout",
+    requestInterceptor: function(request) {
+    	request.headers['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
+        return request;
+    }
   })
 
   window.ui = ui
