@@ -17,10 +17,10 @@
 	],
 	"require" : {
 		"php" : ">=7.0.0",
-		"illuminate/support" : "5.6.*",
-		"illuminate/view" : "5.6.*",
-		"illuminate/config" : "5.6.*",
-		"illuminate/console" : "5.6.*",
+		"illuminate/support" : "5.*",
+		"illuminate/view" : "5.*",
+		"illuminate/config" : "5.*",
+		"illuminate/console" : "5.*",
 		"zircote/swagger-php" : "2.*"
 	},
 	"require-dev" : {
