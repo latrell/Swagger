@@ -11,5 +11,11 @@ return array(
 	],
 	'exclude' => null,
 
-	'title' => 'Swagger UI'
+	'title' => 'Swagger UI',
+
+    'swagger_api_domain' => '',
+
+    'constants' => [
+        // 'API_HOST' => env('SWAGGER_API_HOST')
+    ]
 );

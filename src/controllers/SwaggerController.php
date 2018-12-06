@@ -19,11 +19,23 @@ class SwaggerController extends Controller
 		$directory = config('latrell-swagger.paths');
 		$exclude = config('latrell-swagger.exclude');
 
+        $constants = config('latrell-swagger.constants');
+        self::defineConstants($constants);
+
 		$swagger = \Swagger\scan($directory, [
 			'exclude' => $exclude
 		]);
 		return response((string) $swagger, 200, [
 			'Content-Type' => 'application/json'
 		]);
+	}
+
+    protected static function defineConstants(array $constants)
+    {
+        if (!empty($constants)) {
+            foreach ($constants as $key => $value) {
+                defined($key) || define($key, $value);
+            }
+        }
 	}
 }
